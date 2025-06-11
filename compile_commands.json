@@ -1,0 +1,56 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-std=c++17",
+      "-I./libs",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-c",
+      "-o",
+      "src/Game.o",
+      "src/Game.cpp"
+    ],
+    "directory": "/home/judas/2dgameengine",
+    "file": "/home/judas/2dgameengine/src/Game.cpp",
+    "output": "/home/judas/2dgameengine/src/Game.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-std=c++17",
+      "-I./libs",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-c",
+      "-o",
+      "src/Logger.o",
+      "src/Logger.cpp"
+    ],
+    "directory": "/home/judas/2dgameengine",
+    "file": "/home/judas/2dgameengine/src/Logger.cpp",
+    "output": "/home/judas/2dgameengine/src/Logger.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-std=c++17",
+      "-I./libs",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-c",
+      "-o",
+      "src/Main.o",
+      "src/Main.cpp"
+    ],
+    "directory": "/home/judas/2dgameengine",
+    "file": "/home/judas/2dgameengine/src/Main.cpp",
+    "output": "/home/judas/2dgameengine/src/Main.o"
+  }
+]
