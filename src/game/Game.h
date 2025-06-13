@@ -2,6 +2,8 @@
 #define GAME_H
 
 #include <SDL.h>
+#include <memory>
+#include "../ecs/Registry.h"
 
 const int FPS = 60;
 const int MILLISECS_PER_FRAME = 1000 / FPS; // Amount of millisecs allocated to each frame to process. 
@@ -12,6 +14,8 @@ class Game {
         int millisecsPreFrame = 0;
         SDL_Window* window;
         SDL_Renderer* renderer;
+
+        std::unique_ptr<Registry> registry;
 
     public:
         Game();

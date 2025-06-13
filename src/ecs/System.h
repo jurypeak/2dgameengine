@@ -6,6 +6,9 @@
 #include "Component.h"
 #include <vector>
 
+// Forward declaration
+class Entity;
+
 /* 
  * A bitset (1 and 0s) to keep track of which components
  * an entity has, and also helps keep track of which

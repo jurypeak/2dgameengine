@@ -1,15 +1,15 @@
 #include "Game.h"
 #include "../logger/Logger.h"
 #include <SDL.h>
-#include "../ecs/Component.h"
 #include "../ecs/Entity.h"
-#include "../ecs/Registry.h"
 #include "../ecs/System.h"
 #include <SDL_image.h>
+#include <memory>
 #include <glm/glm.hpp>
 
 Game::Game() {
     isRunning = false;
+    registry = std::make_unique<Registry>();
     Logger::Log("Game constructor called!");
 }
 
@@ -62,7 +62,8 @@ void Game::Run() {
 
 
 void Game::Setup() {
-
+    Entity tank = registry->CreateEntity();
+    Entity truck = registry->CreateEntity();
 }
 
 void Game::ProcessInput() {
