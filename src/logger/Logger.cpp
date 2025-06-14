@@ -1,8 +1,9 @@
-#include "Logger.h"
 #include <chrono>
 #include <ctime>
 #include <string>
 #include <iostream>
+
+#include "Logger.h"
 
 // Could just use spdlog.
 

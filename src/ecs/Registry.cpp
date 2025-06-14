@@ -1,14 +1,14 @@
 #include "Registry.h"
 #include "System.h"
-#include "Entity.h"
 #include "../logger/Logger.h"
 
 Entity Registry::CreateEntity() {
-    int entityId;
+    std::size_t entityId;
 
     entityId = numEntities++;
 
     Entity entity(entityId);
+    entity.registry = this;
     entitiesToBeAdded.insert(entity);
 
     if (entityId >= entityComponentSignatures.size()) {

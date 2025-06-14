@@ -1,23 +1,14 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 
-#include <bitset>
-#include "Entity.h"
-#include "Component.h"
 #include <vector>
+#include <bitset>
 
-// Forward declaration
 class Entity;
 
-/* 
- * A bitset (1 and 0s) to keep track of which components
- * an entity has, and also helps keep track of which
- * entities a system is intrested in.
-*/
-
-const unsigned int MAX_COMPONENTS = 32;
-
-typedef std::bitset<MAX_COMPONENTS> Signature ;
+#include "Component.h"
+#include "Entity.h"
+#include "Config.h"
 
 // Processes entities that contains a signature.
 class System {

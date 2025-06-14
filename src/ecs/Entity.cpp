@@ -1,6 +1,6 @@
 #include "Entity.h"
 
-int Entity::GetId() const {
+std::size_t Entity::GetId() const {
     return id;
 }
 

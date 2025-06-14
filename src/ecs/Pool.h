@@ -1,6 +1,7 @@
 #ifndef POOL_H
 #define POOL_H
 
+#include <cstddef>
 #include <vector>
 
 class IPool {
@@ -14,7 +15,7 @@ class Pool: public IPool {
         std::vector<T> data;
 
     public:
-        Pool(int size = 100) {
+        Pool(std::size_t size = 100) {
         data.resize(size);
     }
 
@@ -24,11 +25,11 @@ class Pool: public IPool {
         return data.empty();
     }
 
-    int GetSize() const {
+    std::size_t GetSize() const {
         return data.size();
     }
 
-    void Resize(int n) {
+    void Resize(std::size_t n) {
         data.resize(n);
     }
 
@@ -40,15 +41,15 @@ class Pool: public IPool {
         data.push_back(object);
     }
 
-    void Set(int index, T object) {
+    void Set(std::size_t index, T object) {
         data[index] = object;
     }
 
-    T& Get(int index) {
+    T& Get(std::size_t index) {
         return static_cast<T&>(data[index]);
     }
 
-    T& operator [](unsigned int index) {
+    T& operator [](std::size_t index) {
         return data[index];
     }
 };

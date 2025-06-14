@@ -1,3 +1,5 @@
+#include <cstddef>
+
 #include "Component.h"
 
-int IComponent::nextId = 0;
+std::size_t IComponent::nextId = 0;
